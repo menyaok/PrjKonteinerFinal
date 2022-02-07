@@ -41,6 +41,16 @@
     End Sub
 
     Private Sub timerPikkus_Tick(ByVal sender As Object, e As EventArgs) Handles timerPikkus.Tick
+
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        txtValjundTekst1.Text = ""
+        txtValjundTekst2.Text = ""
+        txtSisendTekst.Text = ""
+    End Sub
+
+    Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
         txtPikkus.Text = Len(txtSisendTekst.Text)
 
         Dim inputString As String
@@ -53,11 +63,5 @@
 
         Next
         tsArv.Text = intCount.ToString
-    End Sub
-
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        txtValjundTekst1.Text = ""
-        txtValjundTekst2.Text = ""
-        txtSisendTekst.Text = ""
     End Sub
 End Class
